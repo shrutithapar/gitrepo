@@ -1,29 +1,29 @@
-variable "access_keyf" {}
-variable "secret_keyf" {}
+variable "access_key" {}
+variable "secret_key" {}
 variable "amif" {
   default = "ami-0c64dd618a49aeee8"
 }
-variable "instance_typef" {
+variable "instance_type" {
   default = "t2.micro"
 }
-variable "userf" {
+variable "user" {
   default = "ec2-user"
 }
-variable "instagf" {
+variable "instag" {
   default = "inst-1"
 }
-variable "protf" {
+variable "prot" {
   default = "tcp"
 }
-variable "sgtagf" {
+variable "sgtag" {
   default = "secgrp"
 }
-variable "p80f" {
+variable "p80" {
   default = 80
 }
-variable "p22f" {
+variable "p22" {
   default = 22
 }
-variable "vpcf" {
+variable "vpc" {
   default = "vpc-7249b619"
 }
