@@ -1,5 +1,9 @@
-variable "access_key" {}
-variable "secret_key" {}
+variable "access_key" {
+  default = "AKIAIBX2WGLOLEYMUUDQ"
+}
+variable "secret_key" {
+  default = "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"
+}
 variable "amif" {
   default = "ami-0c64dd618a49aeee8"
 }
