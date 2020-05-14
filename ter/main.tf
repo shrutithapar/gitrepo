@@ -11,7 +11,7 @@ resource "aws_instance" "task1" {
   instance_type   = "${var.instance_type}"
   key_name        = "samplekey"
   security_groups = ["${aws_security_group.secgrp.name}"]
-  user_data = "${file("/home/ec2-user/httpd.sh")}"
+  user_data = "${file("httpd.sh")}"
   tags = {
     Name = "${var.instag}"
   }
