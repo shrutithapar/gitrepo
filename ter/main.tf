@@ -4,14 +4,14 @@ provider "aws" {
 }
 resource "aws_key_pair" "deployer" {
   key_name = "samplekey"
-  public_key = file("id_rsa.pub")
+  public_key = "${file("/home/ec2-user/.ssh/id_rsa.pub")}"
 }
 resource "aws_instance" "task1" {
   ami             = "${var.ami}"
   instance_type   = "${var.instance_type}"
   key_name        = "samplekey"
   security_groups = ["${aws_security_group.secgrp.name}"]
-  user_data = "${file("httpd.sh")}"
+  user_data = "${file("/home/ec2-user/httpd.sh")}"
   tags = {
     Name = "${var.instag}"
   }
