@@ -3,7 +3,7 @@ provider "aws" {
 }
 resource "aws_key_pair" "deployer" {
   key_name = "samplekey"
-  public_key = file("/home/ec2-user/id_rsa.pub")
+  public_key = "${file("/home/ec2-user/id_rsa.pub")"}"
 }
 resource "aws_instance" "instance" {
   ami = "ami-0c64dd618a49aeee8"
