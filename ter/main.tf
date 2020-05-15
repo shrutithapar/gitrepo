@@ -8,7 +8,7 @@ resource "aws_key_pair" "deployer" {
 }
 resource "aws_instance" "task1" {
   ami             = "${var.ami}"
-  instance_type   = "var.instance_type"
+  instance_type   = "${var.instance_type}"
   key_name        = "samplekey"
   security_groups = ["${aws_security_group.secgrp.name}"]
   user_data = file("httpd.sh")
