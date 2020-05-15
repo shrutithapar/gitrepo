@@ -7,7 +7,7 @@ resource "aws_key_pair" "deployer" {
   public_key = file("id_rsa.pub")
 }
 resource "aws_instance" "task1" {
-  ami             = "${var.ami}"
+  ami             = "ami-0c64dd618a49aeee8"
   instance_type   = "${var.instance_type}"
   key_name        = "samplekey"
   security_groups = ["${aws_security_group.secgrp.name}"]
