@@ -1,6 +1,6 @@
 provider "aws" {
   region  = "us-east-2"
-  version = "~> 1.41"
+  version = "~> 2.7"
 }
 resource "aws_key_pair" "deployer" {
   key_name = "samplekey"
